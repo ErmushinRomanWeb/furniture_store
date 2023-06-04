@@ -1,0 +1,62 @@
+.header {
+  height: 75px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  border-bottom: 0.5px solid rgba(255, 255, 255, 0.8);
+  align-items: center;
+  &__logo-mobil {
+    display: none;
+  }
+  &__input {
+    font-family: "Montserrat", sans-serif;
+    height: 41px;
+    width: 288px;
+    box-sizing: border-box;
+    border: 1px solid #ffffff;
+    border-radius: 20px;
+    background-color: transparent;
+    outline: none;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    color: #ffffff;
+    padding-left: 32px;
+    padding-right: 32px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    &::placeholder {
+      font-family: "Montserrat" sans-serif;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 20px;
+      color: #ffffff;
+    }
+  }
+
+
+
+  &__menu {
+    display: flex;
+    gap: 32px;
+    &-mob {
+      display: none;
+    }
+  }
+
+  &__link {
+    font-size: 16px;
+    line-height: 20px;
+    text-decoration: underline transparent;
+    text-underline-offset: 3px;
+    font-style: normal;
+    font-weight: 400;
+    color: #ffffff;
+    transition: all 0.3s;
+    &:active {
+      text-decoration: underline #ffffff;
+    }
+  }
+}
