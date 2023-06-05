@@ -1,0 +1,123 @@
+@media (min-width: 1025px) {
+  // ЭФФЕКТЫ НАВЕДЕНИЯ
+
+  .header__link:hover {
+    text-decoration: underline #ffffff;
+  }
+  .top__link:hover {
+    text-decoration: underline transparent;
+  }
+  .for__item:hover {
+    filter: contrast(150%);
+    box-shadow: 0px 0px 10px 5px rgb(146, 146, 146);
+    transform: scale(1.03);
+  }
+
+  // PRODUCT
+  .product:hover {
+    box-sizing: border-box;
+    filter: contrast(150%);
+    box-shadow: 0px 0px 10px 5px rgb(146, 146, 146);
+    transform: scale(1.03);
+  }
+  .product:hover .product__icon-wrapper {
+    display: block;
+  }
+  .product__icon-wrapper {
+    display: none;
+  }
+  .product__icon {
+    path {
+      transition: fill 0.3s;
+    }
+    &:hover path {
+      fill: #f400a1;
+    }
+  }
+
+  .catalog-link-box__link:hover {
+    color: #888888;
+    text-decoration: underline transparent;
+  }
+
+  // CATALOG
+  .main-catalog__link:hover .main-catalog__span {
+    text-decoration: underline #000000;
+  }
+  .main-catalog__order:hover {
+    border: 1px solid #000000;
+  }
+
+  // BASKET
+  .cart {
+    &__item-link:hover {
+      color: #888888;
+    }
+    &__solutions-button:hover {
+      background: #000000;
+      border: 1px solid #000000;
+      border-radius: 20px;
+      color: #ffffff;
+    }
+    &__form-button:hover {
+      background: #000000;
+      border: 1px solid #000000;
+      border-radius: 20px;
+      color: #ffffff;
+    }
+  }
+
+  // FOOTER
+  .footer__link:hover {
+    text-decoration: underline black;
+    color: #000000;
+  }
+  .footer__masenger {
+    path {
+      transition: 0.3s;
+    }
+    &:hover path {
+      fill: #000000;
+    }
+  }
+  .footer__form-button:hover {
+    background: #000000;
+    border: 1px solid #000000;
+    border-radius: 20px;
+    color: #ffffff;
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1366px) {
+  .center {
+    padding-left: calc(50% - 788px / 2);
+    padding-right: calc(50% - 788px / 2);
+  }
+  .center-with-padding {
+    padding-left: calc(50% - 402px);
+    padding-right: calc(50% - 402px);
+  }
+  .cart__content {
+    grid-column: 1 / -1;
+  }
+  .cart__form {
+    margin-top: 64px;
+    grid-column: span 6;
+  }
+  .for__content {
+    .for__item {
+      height: 268px;
+    }
+  }
+  .footer__logo {
+    display: none;
+  }
+  .footer__info {
+    margin-right: 170px;
+  }
+
+  .footer__form-box {
+    max-width: 266px;
+    box-sizing: border-box;
+  }
+}

@@ -1,0 +1,255 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+@import "blocks/header.scss";
+@import "blocks/title.scss";
+@import "blocks/heading.scss";
+@import "blocks/product.scss";
+@import "blocks/product-contant.scss";
+@import "blocks/footer.scss";
+@import "blocks/catalog-link-box.scss";
+
+.center {
+  padding-left: calc(50% - 600px);
+  padding-right: calc(50% - 600px);
+}
+
+.center-with-padding {
+  padding-left: calc(50% - 608px);
+  padding-right: calc(50% - 608px);
+}
+
+.heading_with-padding {
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.top {
+  height: 720px;
+  background: url(images/fon.jpg), #c4c4c4;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  .top__content {
+    margin-top: 63px;
+  }
+  &__slogan {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 32px;
+    color: #ffffff;
+    margin-top: 16px;
+  }
+  &__link-box {
+    margin-top: 16px;
+  }
+  &__link {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    color: #ffffff;
+    margin-top: 16px;
+    transition: text-decoration 0.3s;
+    &:active {
+      text-decoration: underline transparent;
+    }
+  }
+}
+
+.for {
+  &__segmentation {
+    padding-top: 64px;
+  }
+  &__content {
+    padding-top: 32px;
+    display: grid;
+    gap: 32px;
+    grid-template-columns: repeat(12, 1fr);
+  }
+  &__item {
+    height: 415px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    grid-column: span 4;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 34px;
+    line-height: 41px;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s;
+    &:active {
+      filter: contrast(150%);
+      box-shadow: 0px 0px 10px 5px rgb(146, 146, 146);
+      transform: scale(1.03);
+    }
+  }
+  &__item__big {
+    grid-column: span 6;
+  }
+  &__item_1 {
+    background-image: url(./images/for-1.jpg);
+  }
+  &__item_2 {
+    background-image: url(./images/for-2.jpg);
+  }
+  &__item_3 {
+    background-image: url(./images/for-3.jpg);
+  }
+  &__item_4 {
+    background-image: url(./images/for-4.jpg);
+  }
+  &__item_5 {
+    background-image: url(./images/for-5.jpg);
+  }
+}
+
+.product-wrapper__special {
+  margin-top: 64px;
+}
+
+.product-wrapper__catalog {
+  margin-top: 72px;
+}
+
+.product__price {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 29px;
+  color: #050505;
+}
+
+.product__price_old {
+  text-decoration: line-through;
+  color: #888888;
+}
+
+.catalog-link-box {
+  margin-top: 39px;
+}
+
+/* СТРАНИЦА КАТАЛОГА */
+
+.top-catalog {
+  height: 400px;
+  background: url(./images/fon_catalog.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  &__content {
+    margin-top: 127px;
+  }
+}
+
+
+.main-catalog{
+  &__menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 64px;
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+  &__link-wrapper {
+    display: flex;
+    min-width: 229px;
+  }
+  &__link {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 32px;
+    color: #000000;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  &__link:not(:last-child):after {
+    content: "/";
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 32px;
+    color: #000000;
+    padding: 10px;
+  }
+  &__span {
+    text-decoration: underline transparent;
+    text-underline-offset: 3px;
+    transition: all 0.3s;
+  }
+  &__link:active .main-catalog__span {
+    text-decoration: underline #000000;
+  }
+  &__order {
+    display: flex;
+    font-size: 16px;
+    font-family: "Montserrat" sans-serif;
+    font-weight: 400;
+    color: #000000;
+    line-height: 20px;
+    padding: 11px 25px 10px 14px;
+    width: 288px;
+    box-sizing: border-box;
+    border: 1px solid #aaa;
+    border-radius: 0.5em;
+    outline: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: #ffffff;
+    border-radius: 20px;
+    background: url(./images_catalog/arrow.svg);
+    background-repeat: no-repeat;
+    background-position: 246px 16px;
+    transition: border 0.3s;
+    &:active {
+      border: 1px solid #000000;
+    }
+  }
+  &__products {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 16px;
+    row-gap: 32px;
+    margin-top: 33px;
+  }
+}
+
+
+
+.center-with-padding {
+  padding-left: calc(50% - 608px);
+  padding-right: calc(50% - 608px);
+}
+
+.heading_with-padding {
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+@import "basket.scss";
+
+@import "notebook.scss";
+
+@import "tablet.scss";
+
+@import "mobil.scss";
+
+@import "animations.scss";
